@@ -6,6 +6,16 @@ assert sys.version_info >= (3,7), "This script requires at least Python 3.7"
 quit = False
 range = 100
 
+print("\nWelcome to The Guessing Game")
+name = input("What is your name?: ")
+start = input("\nReady to play {}?".format(name))
+start = start.lower()
+if start == "yes" or start == "y":
+    quit = False
+else:
+    quit = True
+    
+
 while not quit:
     random_number = random.randint(1,range)
     count = 1
@@ -31,4 +41,4 @@ while not quit:
     else:
         quit = True
 
-print("\n\nThanks for playing! See you later.")
+print("\n\nThanks for playing {}! See you later.".format(name))
